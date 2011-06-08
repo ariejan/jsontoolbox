@@ -1,8 +1,8 @@
 http    = require 'http'
 express = require 'express'
-app     = express.createServer()
+app     = express.createServer(express.logger())
 
-appPort = 8080
+appPort = process.env.PORT || 3000
 
 # Generates a random password of given +length+
 # using a-zA-Z0-9
@@ -22,7 +22,7 @@ app.get '/api/password', (req, res) ->
   res.contentType('application/json')
   res.send {"password":generatePassword(req.query.length)}
 
-app.listen(appPort)
-console.log("JSON Toolkit ready on http://localhost:#{appPort}")
+app.listen appPort ->
+  console.log("JSON Toolkit ready on http://localhost:#{appPort}")
 
 
