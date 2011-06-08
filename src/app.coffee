@@ -2,7 +2,7 @@ http    = require 'http'
 express = require 'express'
 app     = express.createServer()
 
-appPort = 3000
+appPort = 8080
 
 # Generates a random password of given +length+
 # using a-zA-Z0-9
