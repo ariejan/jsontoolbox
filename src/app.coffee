@@ -22,7 +22,7 @@ app.get '/api/password', (req, res) ->
   res.contentType('application/json')
   res.send {"password":generatePassword(req.query.length)}
 
-app.listen appPort ->
+app.listen appPort, ->
   console.log("JSON Toolkit ready on http://localhost:#{appPort}")
 
 
