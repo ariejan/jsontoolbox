@@ -1,0 +1,22 @@
+{
+  "name" : "jsontoolbox",
+  "version" : "0.0.1",
+  "description" : "Web service that returns useful data in JSON format",
+  "author" : "Ariejan de Vroom <ariejan@ariejan.nl>",
+  "main" : "./lib/app.js",
+  "licenses" : [
+    { "type" : "MIT",
+      "url" : "http://github.com/ariejan/jsontoolkit/raw/master/LICENSE"
+    }
+  ],
+  "dependencies" : {
+    "express" : ">= 2.3.11"
+  },
+  "devDependencies" : {
+    "coffee-script" : ">= 1.1.1"
+  },
+  "engines" : {
+    "node" : "~0.4"
+  }
+}
+
