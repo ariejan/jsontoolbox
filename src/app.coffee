@@ -20,6 +20,7 @@ app.get '/api/password', (req, res) ->
 #### GET /api/ip
 # Returns your IP address
 app.get '/api/ip', (req, res) ->
+  console.log req
   res.send {"ip":req.connection.remoteAddress}
 
 app.listen appPort, ->
