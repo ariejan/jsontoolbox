@@ -20,8 +20,7 @@ app.get '/api/password', (req, res) ->
 #### GET /api/ip
 # Returns your IP address
 app.get '/api/ip', (req, res) ->
-  console.log req.headers
-  res.send {"ip":req.connection.remoteAddress}
+  res.send {"ip":req.headers.x-real-ip}
 
 app.listen appPort, ->
   console.log("JSON Toolkit ready on http://localhost:#{appPort}")
