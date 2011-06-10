@@ -1,7 +1,7 @@
 class Generator
   password: (length = 12, callback) =>
     # callback ?= noop
-    
+
     console.log("Generating password with length #{length}")
 
     chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
