@@ -28,10 +28,14 @@ task 'build', 'Compile CoffeeScript source files', ->
 task 'watch', 'Recompile CoffeeScript source files when modified', ->
   build true
 
-# task 'test', 'Run the test suite', ->
-#   build ->
-#     require.paths.unshift __dirname + "/lib"
-#     {reporters} = require 'nodeunit'
-#     process.chdir __dirname
-#     reporters.default.run ['test']
+task 'test', 'Run the test suite', ->
+  build ->
+    # require.paths.unshift __dirname + "/test"
 
+    fs.readdir 'test', (err, contents) ->
+      options = []
+
+      coffee = spawn 'coffee', options
+      coffee.stdout.on 'data', (data) -> print data.toString()
+      coffee.stderr.on 'data', (data) -> print data.toString()
+      coffee.on 'exit', (status) -> callback?() if status is 0

@@ -20,6 +20,15 @@ out the wiki for more info.
  * Hack
  * Create a pull request
 
+# Running tests
+
+Install `coffee-script` and `vows`:
+
+    npm install -g coffee-script
+    npm install -g vows
+
+Then simple run `vows` in the root directory.
+
 # Authors
 
  * Ariejan de Vroom <ariejan@ariejan.net>
