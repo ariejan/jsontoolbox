@@ -1,4 +1,7 @@
 module.exports = (app) ->
+
+  app.api['/app/ip'] = "Returns the clients IP address"
+
   #### GET /api/ip
   # Returns your IP address
   app.get '/api/ip', (req, res) ->

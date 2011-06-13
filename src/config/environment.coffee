@@ -1,6 +1,6 @@
 module.exports = (app, express) ->
 
-  # app.configure ->
+  app.api = {}
 
   app.configure 'development', () ->
     app.use express.logger()

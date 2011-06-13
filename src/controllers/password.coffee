@@ -1,5 +1,8 @@
 module.exports = (app) ->
 
+  app.api['/app/password'] = "Generates a random password of length 12"
+  app.api['/app/password?length=N'] = "Generates a random password of length N; 0 < N < 256"
+
   class Password
     @generate : (length = 12, callback) ->
       chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"

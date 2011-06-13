@@ -16,4 +16,6 @@ module.exports = (app) ->
 
     data['description'] = fs.readFileSync("#{__dirname}/../../views/description.txt", 'utf8')
 
+    data['api'] = app.api
+
     res.send data
