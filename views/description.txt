@@ -1,0 +1,6 @@
+JSON Toolbox is a simple web service, built to gather more knowledge
+about Node.js, Express, Vows, Zombie.js and many others. 
+
+In the process, this web service provides you with some handy services,
+like getting your current IP address, user-agent string - all in JSON
+format.
