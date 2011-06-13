@@ -27,7 +27,9 @@ Install `coffee-script` and `vows`:
     npm install -g coffee-script
     npm install -g vows
 
-Then simple run `vows` in the root directory.
+Then, run the tests with the following command:
+
+    NODE_ENV=test vows --spec
 
 # Authors
 

@@ -1,4 +1,4 @@
-{
+{ 
   "name" : "jsontoolbox",
   "version" : "0.0.1",
   "description" : "Web service that returns useful data in JSON format",
@@ -14,7 +14,10 @@
   },
   "devDependencies" : {
     "coffee-script" : ">= 1.1.1",
-    "vows" : "0.5.8"
+    "vows" : "0.5.8",
+    "zombie" : "0.9.5",
+    "should" : "0.2.1",
+    "request" : "1.9.5"
   },
   "engines" : {
     "node" : "~0.4"
