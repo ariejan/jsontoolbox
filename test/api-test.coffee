@@ -2,24 +2,18 @@ express     = require('express')
 zombie      = require('zombie')
 vows        = require('vows')
 should      = require('should')
+core        = require("#{__dirname}/../src/core")
 
 app         = express.createServer()
-
-testPort    = 50666
-
 process.env.NODE_ENV = 'test'
+testPort    = 50666
 
 vows
   .describe('API Service')
   .addBatch
     'start test server':
       topic: ->
-        require('../src/config/environment')(app, express)
-        require('../src/controllers/password')(app)
-        require('../src/controllers/ip-address')(app)
-        require('../src/controllers/user-agent')(app)
-        require('../src/controllers/ping')(app)
-        require('../src/controllers/frontpage')(app)
+        core.setupApp(app, express)
         app.listen testPort, this.callback
       'should have started': -> null
 

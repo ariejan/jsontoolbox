@@ -1,15 +1,11 @@
-express = require('express')
-app     = module.exports = express.createServer()
+express     = require('express')
+app         = module.exports = express.createServer()
+core        = require("#{__dirname}/core")
 
 # Select serer port
 serverPort = process.env.PORT || 3000
 
-# Controllers
-require('./config/environment')(app, express)
-require('./controllers/password')(app)
-require('./controllers/ip-address')(app)
-require('./controllers/user-agent')(app)
-require('./controllers/frontpage')(app)
+core.setupApp(app, express)
 
 app.listen serverPort, () ->
   console.log("JSON Toolkit ready on http://localhost:#{serverPort}")
