@@ -22,6 +22,12 @@ out the wiki for more info.
 
 # Running tests
 
+First of all, copy `package.json.dev` to `package.json`. This is a
+temporary hack for Heroku. Heroku tries to install development
+dependencies, which currently fails for Zombie.js.
+
+    cp package.json.dev package.json
+
 Install `coffee-script` and `vows`:
 
     npm install -g coffee-script
